@@ -6,63 +6,23 @@ body {
 }
 
 .background {
-    position: relative;
-    background-image: url('photos/background.png');
+    /* position: relative; */
+    background-image: url('photos/BackgroundwithStripes.png');
     background-size: cover;
     background-repeat: no-repeat;
     background-attachment: fixed;
-    width: 100vw; /* 100% viewport width */
-    height: 100vh; /* 100% viewport height */
-    /* Add any other styles you want for the background */
-}
-
-.overlay {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    /* Adjust the overlay size as needed */
-    width: 80%; /* Adjust to control the size of the overlay */
-    max-width: 600px; /* Set a maximum width for the overlay image */
-    z-index: 1;
-}
-
-.overlay img {
-    max-width: 100%;
-    display: block;
-    margin: 0 auto;
+    width: 100vw;
+    height: 100vh;
+    /* border: 10px solid pink; */
 }
 
 .content {
     position: relative;
-    z-index: 2;
-    /* Add styles for your other content as needed */
+    z-index: 500;
+    /* border: 2px solid orange; */
 }
 
-.bottom-images {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    z-index: 2; /* Place it above the background and overlay */
+.hidden {
+    display: none;
 }
 
-.bottom-left {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-}
-
-.bottom-right img {
-    display: block;
-    margin: 0 auto;
-    margin-top: 10px; /* Adjust the spacing between the two images */
-    max-width: 100%;
-}
-
-.donation-link {
-    position: absolute;
-    bottom: 20px;
-    left: 50%;
-    transform: translateX(-50%);
-}
