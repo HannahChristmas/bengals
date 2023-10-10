@@ -1,28 +1,60 @@
 body {
     font-family: 'Courier New', Courier, monospace;
-    color: blue;
     margin: 0;
     overflow: hidden;
 }
 
 .background {
-    /* position: relative; */
     background-image: url('photos/BackgroundwithStripes.png');
     background-size: cover;
     background-repeat: no-repeat;
+    background-position: center;
     background-attachment: fixed;
     width: 100vw;
     height: 100vh;
-    /* border: 10px solid pink; */
 }
 
 .content {
     position: relative;
     z-index: 500;
-    /* border: 2px solid orange; */
 }
 
 .hidden {
     display: none;
 }
 
+#still {
+    width: 100%;
+    max-width: 30rem;
+    display: block;
+    margin: 0 auto;
+    z-index: 900;
+    padding-top: 3rem;
+}
+
+#ringing {
+    width: 100%;
+    max-width: 30rem;
+    display: none;
+    margin: 0 auto;
+    z-index: 900;
+    padding-top: 3rem;
+}
+
+#logo-stack {
+    position: fixed; 
+    top: 0;
+    left: 0; 
+    width: 100%; 
+    height: 100%;
+    z-index: 1; 
+    max-width: 740px;
+}
+
+#donate {
+    position: absolute;
+    right: 4.5vh;
+    bottom: 5vh;
+    width: 22vh;
+    z-index:4;
+}
