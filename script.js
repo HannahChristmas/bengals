@@ -1,3 +1,4 @@
+// Function to handle user click
 function transformToGIF() {
     const stillImage = document.getElementById('still');
     const gifRingingImage = document.getElementById('ringing');
@@ -21,7 +22,6 @@ const stillImage = document.getElementById('still');
 stillImage.addEventListener('click', transformToGIF);
 
 
-
 // Function to handle device shake
 function handleDeviceShake(event) {
     const threshold = 15;
@@ -33,15 +33,6 @@ function handleDeviceShake(event) {
     );
 
     if (magnitude > threshold) {
-        alert("Shake it up!");
+        transformToGIF();
     }
-}
-
-// Add a devicemotion event listener to detect shaking
-if ('DeviceMotionEvent' in window) {
-    // Browser supports the devicemotion event
-    window.addEventListener('devicemotion', handleDeviceShake);
-} else {
-    // Browser does not support the devicemotion event
-    alert("Nope!");
 }
