@@ -2,21 +2,43 @@ body {
     font-family: 'Courier New', Courier, monospace;
     margin: 0;
     overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #2f2e2e;
 }
 
-.background {
-    background-image: url('photos/BackgroundwithStripes.png');
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-position: center;
-    background-attachment: fixed;
-    width: 100vw;
+.main-container {
+    text-align: center;
+    max-width: 740px;
     height: 100vh;
+    position: relative;
 }
 
-.content {
-    position: relative;
-    z-index: 500;
+#background {
+    width: 100%;
+    height: 100%;
+    display: block;
+}
+
+#logos {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    max-width: 100%;
+    height: auto;
+    z-index: 1;
+}
+
+#donate {
+    position: absolute;
+    bottom: 5vh; /* 10 pixels from the top */
+    right: 5vh; /* 10 pixels from the right */
+    max-width: 100%;
+    height: 2rem;
+    z-index: 2;
 }
 
 .hidden {
@@ -24,37 +46,21 @@ body {
 }
 
 #still {
+    position: fixed;
     width: 100%;
-    max-width: 30rem;
+    max-width: 56vh;
     display: block;
     margin: 0 auto;
-    z-index: 900;
+    z-index: 2000;
     padding-top: 3rem;
 }
 
 #ringing {
+    position: fixed;
     width: 100%;
-    max-width: 30rem;
+    max-width: 56vh;
     display: none;
     margin: 0 auto;
-    z-index: 900;
+    z-index: 2000;
     padding-top: 3rem;
-}
-
-#logo-stack {
-    position: fixed; 
-    top: 0;
-    left: 0; 
-    width: 100%; 
-    height: 100%;
-    z-index: 1; 
-    max-width: 740px;
-}
-
-#donate {
-    position: absolute;
-    right: 5vh;
-    bottom: 5vh;
-    width: 22vh;
-    z-index:4;
 }
