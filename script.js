@@ -36,3 +36,11 @@ function handleDeviceShake(event) {
         transformToGIF();
     }
 }
+
+DeviceMotionEvent.requestPermission()
+        .then(permissionState => {
+          if (permissionState === 'granted') {
+            window.addEventListener('devicemotion', handleDeviceShake());
+          }
+        })
+        .catch(console.error);
